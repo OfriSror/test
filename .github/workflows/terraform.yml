@@ -15,7 +15,8 @@ jobs:
       - run: terraform show -no-color terraform.plan > terraform.text
       # generate json output
       - run: terraform show -json terraform.plan > terraform.json
-      - uses: ofrisror/action-terraform-report@v2
+      - uses: OfriSror/test@v2
+        #ofrisror/action-terraform-report@v2
         with:
           # tell the action the plan outputs
           terraform-text: ${{ github.workspace }}/terraform.text
